@@ -1,0 +1,90 @@
+.hero {
+  margin-top: 12px;
+  margin-bottom: 46px;
+
+  &__container {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  &__list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 1));
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: 0;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 40px;
+    background: var(--border-color);
+    overflow: hidden;
+    scroll-snap-align: start;
+  }
+
+  &__information {
+    padding: 80px 0;
+    margin-right: 20px;
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+  }
+
+  &__title {
+    max-width: 510px;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 55px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+
+    span {
+      color: var(--first-color);
+    }
+  }
+
+  &__description {
+    max-width: 550px;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 44px;
+    line-height: 24px;
+  }
+
+  &__image img {
+    pointer-events: none;
+    max-width: 400px;
+    height: 450px;
+    object-fit: cover;
+  }
+}
+
+.hero__list.no-transition {
+  scroll-behavior: auto;
+}
+
+.hero__list.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.hero__list.dragging .hero__item {
+  cursor: grab;
+  user-select: none;
+}

@@ -1,0 +1,603 @@
+/*=============== MEDIA QUERIES ===============*/
+// MEDIA 1020px
+@media screen and (max-width: 1024px) {
+
+  // HERO
+  .hero {
+    &__subtitle {
+      font-size: 12px;
+    }
+
+    &__title {
+      font-size: 45px;
+      line-height: 55px;
+    }
+
+    &__description {
+      max-width: 450px;
+      font-size: 13px;
+    }
+
+    &__image img {
+      max-width: 350px;
+      height: 450px;
+    }
+  }
+
+  // CATALOG
+  .catalog__content-aside {
+    max-width: 200px;
+  }
+
+  // BLOG
+  .blog__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  // FOOTER
+  .footer__join {
+    max-width: 275px;
+  }
+}
+
+// MEDIA 976px
+@media screen and (max-width: 976px) {
+  .nav {
+    &__list {
+      gap: 30px;
+    }
+
+    &__buttons {
+      gap: 20px;
+    }
+  }
+
+  // HERO
+
+  .hero {
+    &__title {
+      max-width: 350px;
+      font-size: 35px;
+      line-height: 45px;
+    }
+
+    &__description {
+      max-width: 350px;
+    }
+
+    &__image img {
+      max-width: 320px;
+      height: 400px;
+    }
+  }
+
+  // CATALOG  
+  .catalog__card-image img {
+    height: 200px;
+  }
+
+  // CARDS
+  .cards {
+    &__item {
+      padding-left: 170px;
+    }
+
+    &__image {
+      width: 200px;
+      height: 280px;
+    }
+  }
+}
+
+// MEDIA 768px
+@media screen and (max-width: 775px) {
+  body {
+    background: var(--border-color);
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .header__mobile {
+    display: block;
+  }
+
+  // HERO
+  .hero {
+    margin-top: 25px;
+
+    &__item {
+      background: var(--first-color-light);
+      border-radius: 30px;
+      padding: 0 20px;
+      padding-right: 0;
+    }
+
+    &__information {
+      margin: 0;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 35px;
+    }
+
+    &__description {
+      max-width: 400px;
+      margin-bottom: 20px;
+
+      & span {
+        display: none;
+      }
+    }
+
+    &__image img {
+      width: 250px;
+      height: 300px;
+    }
+  }
+
+  // CATALOG
+  .catalog {
+    &__products {
+      margin: 0;
+    }
+
+    &__content-aside {
+      display: none;
+    }
+
+    &__cards {
+      row-gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    &__card {
+      border-radius: 20px;
+    }
+
+    &__card-image {
+      background: #fff;
+      border-radius: 20px;
+    }
+
+    &__card-button {
+      background-color: var(--border-color);
+    }
+
+    &__card-discount {
+      font-size: var(--description-text);
+      padding: 5px;
+    }
+
+    &__btn {
+      background: #fff;
+    }
+  }
+
+  // CARDS
+  .cards {
+    margin-bottom: 60px;
+
+    &__item {
+      padding-left: 30px;
+      background: #fff;
+      text-align: center;
+      padding-top: 130px;
+      background-position: center;
+    }
+
+    &__image {
+      height: 200px;
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .blog__item {
+    background: #fff;
+  }
+
+  // FOOTER 
+  .footer {
+    padding-bottom: 110px;
+
+    &__container {
+      background: #fff;
+    }
+
+    &__information {
+      flex-direction: column;
+      align-items: center;
+
+      &:last-child {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
+
+    &__card {
+      text-align: center;
+      max-width: 100%;
+      padding: 0;
+      border: none;
+      margin-bottom: 20px;
+    }
+
+    &__list {
+      padding: 0;
+      margin-left: auto;
+
+      &:nth-child(2n) {
+        margin: 0;
+      }
+    }
+
+    &__join {
+      max-width: 80%;
+      text-align: center;
+      margin: 0;
+      margin-top: 20px;
+    }
+
+    &__input input {
+      background: var(--border-color);
+    }
+
+    &__body {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__box {
+      margin-left: auto;
+
+      &:nth-child(2n),
+      &:nth-child(4n) {
+        margin: 0;
+      }
+    }
+
+    &__logo img {
+      width: 100px;
+    }
+  }
+}
+
+// MEDIA 576px
+@media screen and (max-width: 576px) {
+  .main {
+    padding-bottom: 60px;
+  }
+
+  // HEADER
+  .header {
+    &__item {
+      padding: 26px 10px;
+    }
+
+    &__link svg {
+      width: 20px;
+    }
+
+    &__item--mark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 65px;
+      height: 65px;
+      padding: 26px;
+
+      &::before,
+      &::after {
+        top: 46%;
+      }
+    }
+
+    &__item--mark svg {
+      display: block;
+      width: 25px;
+    }
+  }
+
+  // LOGIN
+  .login {
+    &__titles {
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__description {
+      font-size: 12px;
+    }
+
+    &__form {
+      padding: 0px 20px;
+    }
+
+    &__input {
+      padding: 10px;
+
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+
+    &__forget-password {
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+
+    &__btn {
+      font-size: 15px;
+      padding: 10px;
+    }
+
+    &__medias {
+      padding: 0px 20px;
+      padding-bottom: 30px;
+    }
+
+    &__text {
+      font-size: 12px;
+      margin-bottom: 20px;
+
+      &::before,
+      &::after {
+        max-width: 50px;
+      }
+    }
+  }
+
+  // HERO
+  .hero {
+    margin-bottom: 20px;
+
+    &__information {
+      padding: 20px 0;
+    }
+
+    &__subtitle {
+      font-size: 11px;
+    }
+
+    &__title {
+      max-width: 230px;
+      font-size: 24px;
+      line-height: 25px;
+    }
+
+    &__description {
+      max-width: 230px;
+      font-size: 11px;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
+
+    &__image img {
+      width: 170px;
+      height: 220px;
+      margin-right: -40px;
+    }
+
+    &__btn.btn {
+      background: transparent;
+      color: var(--first-color);
+      padding: 0;
+      font-size: 12px;
+    }
+  }
+
+  // CATALOG
+  .catalog {
+    &__products-link {
+      font-size: var(--description-text);
+
+      &::after {
+        height: 2px;
+      }
+    }
+
+    &__products-sort {
+      display: none;
+    }
+
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 0;
+    }
+
+    &__card:nth-child(even) {
+      margin-top: 50px;
+    }
+
+    &__card-like {
+      display: block;
+    }
+
+    &__card-buttons {
+      display: none;
+    }
+  }
+
+  // CARDS
+  .cards {
+    &__list {
+      gap: 10px;
+    }
+
+    &__item {
+      padding: 20px;
+      padding-top: 100px;
+    }
+
+    &__image {
+      width: 170px;
+      height: 190px;
+      top: -90px;
+    }
+
+    &__title {
+      font-size: 14px;
+    }
+
+    &__description {
+      font-size: 12px;
+    }
+
+    &__btn {
+      padding: 10px;
+    }
+  }
+
+  // BLOG
+  .blog {
+    margin-top: 60px;
+
+    &__title {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    &__description {
+      font-size: 13px;
+    }
+
+    &__list {
+      gap: 15px;
+    }
+
+    &__item-title {
+      font-size: 15px;
+    }
+
+    &__item-description {
+      font-size: 12px;
+    }
+  }
+
+  //FOOTER
+  .footer {
+    &__information {
+      display: flex;
+      align-items: start;
+    }
+
+    &__list {
+      margin: 0;
+    }
+
+    &__join {
+      margin: 0 auto;
+    }
+
+    &__body {
+      grid-template-columns: 1fr;
+    }
+
+    &__box {
+      margin: 0 auto !important;
+      padding: 20px;
+    }
+  }
+}
+
+// MEDIA 375PX
+@media screen and (max-width: 375px) {
+
+  // HERO
+  .hero {
+    &__subtitle {
+      font-size: 8px;
+    }
+
+    &__title {
+      font-size: 15px;
+      line-height: 18px;
+    }
+
+    &__description {
+      font-size: 10px;
+      line-height: 15px;
+    }
+
+    &__image img {
+      width: 150px;
+      height: 170px;
+      margin-right: -50px;
+    }
+  }
+
+  // CATALOG
+  .catalog {
+
+    &__cards {
+      gap: 20px;
+    }
+
+    &__card-image img {
+      height: 150px;
+    }
+
+    &__card-like svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    &__card-title {
+      font-size: 14px;
+    }
+
+    &__card-price {
+      font-size: 14px;
+    }
+
+    &__card-price--line {
+      font-size: 12px;
+    }
+  }
+
+  //CARDS
+  .cards {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      margin-bottom: 90px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .blog__list {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    &__information {
+      grid-template-columns: 1fr !important;
+      text-align: center;
+    }
+
+    &__list {
+      margin: 0 auto !important;
+    }
+
+    &__social-media {
+      text-align: center;
+    }
+
+    &__buttons {
+      justify-content: center;
+    }
+  }
+}

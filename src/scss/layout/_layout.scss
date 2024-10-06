@@ -1,0 +1,43 @@
+.card-title {
+  font-weight: 700;
+  font-size: var(--h3-font-size);
+}
+
+.footer-card {
+  font-weight: 700;
+  font-size: var(--h4-font-size);
+}
+
+.description {
+  font-weight: 400;
+  font-size: var(--description-text);
+  color: var(--text-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background: var(--first-color);
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: var(--h5-font-size);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main {
+  padding-top: 75px;
+  padding-bottom: 100px;
+}

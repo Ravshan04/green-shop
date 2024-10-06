@@ -1,0 +1,258 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 111;
+
+  &__mobile {
+    display: none;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 0;
+  }
+
+  &__input-line {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    background: var(--border-color);
+    margin-right: 8px;
+    border-radius: 10px;
+    padding: 8px 0;
+    border: 1px solid transparent;
+    transition: 0.3s ease;
+
+    &:hover {
+      border-color: var(--first-color);
+    }
+
+    img {
+      padding: 0 10px;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 7px 0;
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 15px;
+
+      &::placeholder {
+        font-weight: 400;
+        font-size: var(--description-text);
+        color: var(--text-color);
+      }
+    }
+  }
+
+  &__filter {
+    padding: 10px;
+    border: none;
+    border-radius: 14px;
+    background: var(--first-color);
+    cursor: pointer;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    padding: 26px;
+    text-align: center;
+    background: #fff;
+    margin-left: -1px;
+    transition: all 0.3s ease;
+
+    &:first-child,
+    &:nth-child(4) {
+      border-top-left-radius: 50px;
+    }
+
+    &:nth-child(5n),
+    &:nth-child(2) {
+      border-top-right-radius: 50px;
+    }
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+    fill: #D9D9D9;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  &__link--active svg {
+    fill: var(--first-color);
+  }
+
+  &__item--mark {
+    transform: translateY(-50%);
+    width: 80px;
+    height: 80px;
+    background: var(--first-color);
+    border-radius: 50%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 57%;
+      left: -11px;
+      width: 79px;
+      height: 46px;
+      background: transparent;
+      border-bottom-left-radius: 50px;
+      box-shadow: -25px 23px 0 7px #fff;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 57%;
+      right: -11px;
+      width: 79px;
+      height: 46px;
+      background: transparent;
+      border-bottom-right-radius: 50px;
+      box-shadow: 25px 23px 0 7px #fff;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--first-color-light);
+
+  &__logo {
+    max-width: 150px;
+    height: 35px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  &__link {
+    display: block;
+    font-weight: 400;
+    font-size: var(--h5-font-size);
+    color: var(--title-color);
+    border-bottom: 2px solid transparent;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: var(--first-color);
+      border-color: var(--first-color);
+    }
+
+    &--active {
+      font-weight: 700;
+      border-bottom: 3px solid var(--first-color);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__button {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1;
+
+    &:first-child:hover .nav__search {
+      width: 300px;
+
+      background: var(--border-color);
+    }
+  }
+
+  &__search {
+    width: 0;
+    position: absolute;
+    top: -11px;
+    right: -11px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: none;
+    background: transparent;
+    z-index: -1;
+    transition: width 0.5s ease;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: var(--description-text);
+      color: var(--text-color);
+    }
+
+    &:focus {
+      outline: 1px solid var(--first-color);
+    }
+  }
+
+  &__cart {
+    position: relative;
+  }
+
+  &__badge {
+    position: absolute;
+    top: -2px;
+    right: -8px;
+    text-align: center;
+    background: var(--first-color);
+    font-weight: 500;
+    font-size: 9px;
+    padding: 2px 4px;
+    border-radius: 50%;
+    color: #fff;
+    border: 3px solid #fff;
+  }
+
+  &__login {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 6px;
+    }
+  }
+}
